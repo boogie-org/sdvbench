@@ -1,6 +1,6 @@
-# SdvBench: Microsoft SDV Benchmarks
+ # SdvBench: Microsoft SDV Benchmarks
 
-[Download here](https://www.microsoft.com/en-us/download/details.aspx?id=55656)
+[Download here](https://www.microsoft.com/en-us/download/details.aspx?id=55656) (Approx. 15000 files, 1.3GB compressed)
 
 This repository contains a subset of the internal tests used by Microsoft's [Static Driver Verifier](https://docs.microsoft.com/en-us/windows-hardware/drivers/devtest/static-driver-verifier) tool. These tests are generated from Window's Device Drivers while checking for one of the various [properties](https://msdn.microsoft.com/en-us/library/windows/hardware/ff551714) that WDM drivers must satisfy. 
 
