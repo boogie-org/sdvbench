@@ -10,7 +10,22 @@ Each program is a [Boogie](https://github.com/boogie-org/boogie) file and repres
 
 The programs are readily analyzed by [Corral](https://www.microsoft.com/en-us/research/project/q-program-verifier/), a whole-program verifier for Boogie programs. The flags used to run Corral are mentioned alongside each file. Note that while running with a timeout of 2000 seconds, the entire suite takes over a month of CPU time to finish (when running sequentially) with Corral. 
 
-These program carry some preculiarities specific of the use of Corral inside SDV. For instance, all loops have been converted to recursive procedures. Predicates that are used as Houdini candidates (for generating program invariants) are detailed alongside the procedure tagged with the annotation `{:template}`. We invite contributions from the community to help navigate these benchmarks and make them accessible to other verification tools.
+These program carry some preculiarities specific of the use of Corral inside SDV. For instance, all loops have been converted to recursive procedures. Predicates that are used as Houdini candidates (for generating program invariants) are detailed alongside the procedure tagged with the annotation `{:template}`. 
+
+We invite contributions from the community to help navigate these benchmarks and make them accessible to other verification tools. As an example, we have added `BoogieFileStats` utility. To use it, build `BoogieFileStats\BoogieFileStats.sln` using `VS 2015`. Then execute it as follows to obtain some simple statistics about a Boogie program.
+
+```
+sdvbench\BoogieFileStats>BoogieFileStats\bin\Debug\BoogieFileStats.exe SdvBench\ITP_WDM\fail_driver1_cancelroutine_0.bpl
+
+fail_driver1_cancelroutine_0.bpl
+  Procedures: 61
+  Implementations: 54
+  Global variables: 23
+  Map-typed Global variables: 10
+  Basic blocks: 368
+  Commands: 710
+  Call Commands: 147
+```
 
 ## Contact
 
